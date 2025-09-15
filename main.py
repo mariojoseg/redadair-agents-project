@@ -4,12 +4,16 @@ import uvicorn
 from fastapi import FastAPI
 from google.adk.cli.fast_api import get_fast_api_app
 
+from dotenv import load_dotenv
+load_dotenv(override=True)
+
 # Define the base directory
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 AGENT_DIR = BASE_DIR
 
 # Database URI for session management
-SESSION_SERVICE_URI = f"sqlite:///{os.path.join(BASE_DIR, 'sessions.db')}"
+USE_IN_MEMORY_SESSION = f"sqlite:///{os.path.join(BASE_DIR, 'sessions.db')}"
+SESSION_SERVICE_URI = os.getenv("DATABASE_URL", USE_IN_MEMORY_SESSION)
 
 # Example allowed origins for CORS
 ALLOWED_ORIGINS = ["http://localhost", "http://localhost:8080", "*"]
