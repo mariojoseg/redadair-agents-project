@@ -1,15 +1,14 @@
 import os
-
 import uvicorn
 from fastapi import FastAPI
 from google.adk.cli.fast_api import get_fast_api_app
-
 from dotenv import load_dotenv
+
 load_dotenv(override=True)
 
 # Define the base directory
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-AGENT_DIR = BASE_DIR
+AGENT_DIR = os.path.join(BASE_DIR, "agents")
 
 # Database URI for session management
 USE_IN_MEMORY_SESSION = f"sqlite:///{os.path.join(BASE_DIR, 'sessions.db')}"
