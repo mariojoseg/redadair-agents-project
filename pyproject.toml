@@ -5,8 +5,10 @@ description = "A project for building multiple redadair agents"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "docling>=2.53.0",
     "dotenv>=0.9.9",
     "google-adk>=1.14.0",
     "psycopg2-binary>=2.9.10",
+    "pypdf2>=3.0.1",
     "pytz>=2025.2",
 ]

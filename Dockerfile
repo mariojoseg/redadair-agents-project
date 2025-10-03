@@ -35,4 +35,4 @@ HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8080/health || exit 1
 
 # Default command to run the ADK API server
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port 8080"]
+CMD ["sh", "-c", "uvicorn src.main:app --host 0.0.0.0 --port 8080"]

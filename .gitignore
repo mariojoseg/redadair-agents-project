@@ -11,3 +11,26 @@ wheels/
 
 # Environment variables
 .env
+
+# All pdf files and folders starting with pdf
+*.pdf
+*pdf*
+*.pdf*
+
+# All markdown files and folders starting with md
+*.md
+*md*
+*.md*
+
+# All markdown files and folders starting with md
+*.txt
+*txt*
+*.txt*
+
+# All markdown files and folders starting with md
+*.docx
+*.doc
+*docx*
+*doc*
+*.docx*
+*.doc*

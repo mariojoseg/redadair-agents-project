@@ -8,7 +8,7 @@ load_dotenv(override=True)
 
 # Define the base directory
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-AGENT_DIR = os.path.join(BASE_DIR, "agents")
+AGENT_DIR = os.path.join(BASE_DIR, "src", "agents")
 
 # Database URI for session management
 USE_IN_MEMORY_SESSION = f"sqlite:///{os.path.join(BASE_DIR, 'sessions.db')}"
@@ -34,5 +34,5 @@ if __name__ == "__main__":
     uvicorn.run(
         app,
         host="0.0.0.0",
-        port=int(os.getenv("PORT", 8080))
+        port=int(os.getenv("PORT", 8000))
     )
